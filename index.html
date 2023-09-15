@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <header>
+      <section class="nav-hero">
+        <div class="section-center hero-center">
+          <h3 class="nav-hero-title">fake store / home</h3>
+          <button class="toggle-nav btn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </section>
+      <div class="nav-center-container">
+        <div class="nav-center">
+          <div class="nav-info-left">
+            <!-- cart-icon -->
+            <div class="toggle-container">
+              <button class="toggle-cart">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+              <span class="cart-item-count">1</span>
+            </div>
+            <!-- separator -->
+            <div class="separator"></div>
+            <!-- registry-btn -->
+            <button class="toggle-registry">
+              <i class="fas fa-user-alt"></i>
+            </button>
+          </div>
+          <div class="nav-info-right">
+            <div class="nav-search">
+              <!-- search-filter -->
+              <form class="search-form">
+                <input
+                  type="text"
+                  class="search-input"
+                  placeholder="Search..."
+                />
+                <button class="search-btn">
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
+            </div>
+            <!-- logo -->
+            <img src="img/online-cart-icons.svg" class="nav-logo" />
+          </div>
+        </div>
+      </div>
+      <nav class="navbar page">
+        <!-- links -->
+        <ul class="nav-links">
+          <li>
+            <button href="#products" class="nav-link scroll-link">
+              products
+            </button>
+          </li>
+          <li>
+            <button href="#about" class="nav-link scroll-link">about</button>
+          </li>
+          <li>
+            <button href="#contact" class="nav-link scroll-link">
+              contact
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="slider-container">
+      <article class="slider"></article>
+      <!-- buttons -->
+      <!-- prev btn -->
+      <button class="slider-btn btn prevBtn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <!-- next btn -->
+      <button class="slider-btn btn nextBtn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </section>
+    <!-- sidebar -->
+    <div class="sidebar-overlay">
+      <aside class="sidebar">
+        <button class="sidebar-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <ul class="sidebar-links">
+          <li><a href="#logo" class="sidebar-link">Home</a></li>
+          <li><a href="" class="sidebar-link">products</a></li>
+          <li><a href="" class="sidebar-link">about</a></li>
+          <li><a href="" class="sidebar-link">contact</a></li>
+        </ul>
+      </aside>
+    </div>
+    <aside class="submenu"></aside>
+    <!-- registry panel -->
+    <div class="registry-overlay">
+      <aside class="registry">
+        <button class="registry-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <section class="registry-form-1">
+          <form class="signin-registry-inputs">
+            <input
+              type="email"
+              name="email"
+              value=""
+              placeholder="your email"
+              class="registry-input"
+              id=""
+            />
+            <input
+              type="password"
+              name="password"
+              value=""
+              placeholder="your password"
+              class="registry-input"
+              id=""
+            />
+          </form>
+          <div class="registry-btns">
+            <button type="submit" class="btn signin-btn">sign in</button>
+            <button class="btn signup-btn">sign up</button>
+          </div>
+        </section>
+        <section class="registry-form-2 next-form">
+          <form class="signup-registry-inputs">
+            <input
+              type="email"
+              name="email"
+              value=""
+              placeholder="enter your email"
+              class="registry-input"
+              id=""
+            />
+            <input
+              type="password"
+              name="password"
+              value=""
+              placeholder="your password"
+              class="registry-input"
+              id=""
+            />
+            <input
+              type="password"
+              name="password"
+              value=""
+              placeholder="repeat your password"
+              class="registry-input"
+              id=""
+            />
+          </form>
+          <div class="registry-btns">
+            <button class="btn register-btn">register</button>
+          </div>
+        </section>
+      </aside>
+    </div>
+    <!-- cart -->
+    <div class="cart-overlay">
+      <aside class="cart">
+        <button class="cart-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <header>
+          <h3 class="text-slanted">your bag</h3>
+        </header>
+        <!-- cart-items -->
+        <div class="cart-items"></div>
+        <!-- footer -->
+        <footer>
+          <h3 class="cart-total text-slanted">total : $12.99</h3>
+          <button class="cart-checkout btn">checkout</button>
+        </footer>
+      </aside>
+    </div>
+    <!-- products -->
+    <section class="products" id="products">
+      <!-- filters -->
+      <section class="filters">
+        <div class="filters-container">
+          <!-- categories -->
+          <h2 class="title"><span>/</span> filters</h2>
+          <h4>category</h4>
+          <article class="categories"></article>
+          <!-- price -->
+          <h4>price</h4>
+          <form class="price-form">
+            <input
+              type="range"
+              class="price-filter"
+              min="0"
+              value="50"
+              max="100"
+            />
+          </form>
+          <p class="price-value"></p>
+        </div>
+      </section>
+      <!-- products -->
+      <section class="products-page">
+        <div class="products-container"></div>
+        <div class="btn-container"></div>
+      </section>
+    </section>
+    <!-- page loading -->
+    <div class="page-loading">
+      <h2>loading...</h2>
+    </div>
+    <!-- about -->
+    <article class="about-page" id="about">
+      <section class="section section-center">
+        <div class="title">
+          <h2><span>/</span> about us</h2>
+        </div>
+        <p class="about-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+          expedita vel, similique magni ea odit fugiat laboriosam id, quas
+          architecto aspernatur quisquam ipsam nesciunt dolore aliquam minus
+          ipsum, dolorem alias quae repudiandae magnam recusandae ducimus? Quae
+          perferendis modi totam quisquam unde optio quod harum delectus, iste
+          fugiat ea! Veritatis quas consequuntur blanditiis tempore, nobis
+          dignissimos inventore omnis magnam ratione. Nam labore id rem? Ut
+          animi pariatur corrupti suscipit, ea voluptatem esse, ullam alias
+          officiis dolor dolore nulla facilis itaque, accusamus facere? Aperiam
+          ducimus tempora hic amet quia eveniet magnam, eligendi, non sit quam
+          nisi assumenda maxime cupiditate minus. Possimus, sapiente.
+        </p>
+        <br />
+        <br />
+        <br />
+        <div class="title">
+          <h2><span>/</span> our history</h2>
+        </div>
+        <p class="about-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+          expedita vel, similique magni ea odit fugiat laboriosam id, quas
+          architecto aspernatur quisquam ipsam nesciunt dolore aliquam minus
+          ipsum, dolorem alias quae repudiandae magnam recusandae ducimus? Quae
+          perferendis modi totam quisquam unde optio quod harum delectus, iste
+          fugiat ea! Veritatis quas consequuntur blanditiis tempore, nobis
+          dignissimos inventore omnis magnam ratione. Nam labore id rem? Ut
+          animi pariatur corrupti suscipit, ea voluptatem esse, ullam alias
+          officiis dolor dolore nulla facilis itaque, accusamus facere? Aperiam
+          ducimus tempora hic amet quia eveniet magnam, eligendi, non sit quam
+          nisi assumenda maxime cupiditate minus. Possimus, sapiente.
+        </p>
+      </section>
+    </article>
+    <!-- contact -->
+    <article class="contact-page" id="contact">
+      <footer class="section section-center">
+        <div class="title">
+          <h2><span>/</span> contact us</h2>
+        </div>
+        <p class="address">
+          <i class="fas fa-map-marker-alt"></i>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+          inventore a ullam, reiciendis facere commodi.
+        </p>
+        <p class="phone">
+          <i class="fas fa-phone"></i>
+          123-456-7890
+        </p>
+        <div class="icon-container">
+          <a href="" class="social-icon">
+            <button class="icon">
+              <i class="fab fa-instagram"></i>
+            </button>
+          </a>
+          <a href="" class="social-icon">
+            <button class="icon">
+              <i class="fab fa-facebook"></i>
+            </button>
+          </a>
+          <a href="" class="social-icon">
+            <button class="icon">
+              <i class="fab fa-twitter"></i>
+            </button>
+          </a>
+          <a href="" class="social-icon">
+            <button class="icon">
+              <i class="fab fa-telegram"></i>
+            </button>
+          </a>
+        </div>
+        <div class="copyright">
+          <h3 class="copyright-title">
+            copyright &copy; 2023 all rights reserved
+          </h3>
+        </div>
+      </footer>
+      <button class="scroll-to-top-btn btn">
+        <i class="fa fa-arrow-up"></i>
+      </button>
+    </article>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
